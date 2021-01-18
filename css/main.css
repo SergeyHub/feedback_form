@@ -1,0 +1,165 @@
+/* Styles defined in the body remove any default margin or padding on the page.
+ * Some browsers add margin, others add padding, so setting them both to zero means
+ * the page offset looks the same in all browsers.
+ * The background rule sets the page background
+ * The text is set to a very dark gray, which is easier on the eyes than black.
+ * The font-family applies to all text on the page, except where specifically
+ * overridden by other rules.
+ */
+body {
+    margin: 0;
+    padding: 0;
+    color: #036;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    overflow-y:scroll;
+    background-color: #fbfbfb;
+}
+/* All margins are removed from h1 and h2 tags, except for the bottom margin,
+ * which is set to 10px. The main font-family is reset to Verdana,
+ * which looks better for titles, and the color is reset to a dark blue.
+ */
+h1 {
+    margin: 0 0 0 60px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #036;
+    vertical-align: middle;
+}
+h2 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #036;
+    font-size: 140%;
+}
+/* Paragraphs have the left and top margins reduced to zero.
+ * The auto rule leaves the right margin untouched,
+ * while the bottom margin is set to 1em. The default font size
+ * is reduced, and the spacing between lines increased
+ * for greater readability.
+ */
+
+p {
+    margin: 0 auto 1em 0;
+    padding: 0 20px;
+    font-size: 115%;
+    line-height: 1.4;
+}
+/* By setting the position as absolute with a top of minus 100px, the page
+ * heading is safely moved offscreen.
+ */
+.header {
+    background: #fbfbfb;
+    min-height:57px;
+    border-bottom: 1px solid #036;
+    border-top: 1px solid #036;
+    vertical-align: middle;
+    padding-top: 8px;
+    margin-top: 5px;
+}
+/* The wrapper div wraps the rest of the page content and adds a 90px
+ * top margin so that it clears the "Norway Journey"
+ * page title in the background image.
+ */
+.wrapper {
+    width: 900px;
+    /*max-width: 1200px;*/
+    /*background: rgb(231, 231, 231);*/
+    margin:0 auto;
+    position:relative;
+    min-height:490px;
+}
+/* The maincontent div has zero top and bottom margins. The right margin is 10%
+ * of page width to give breathing space on the right.
+ * The left margin is set at 190px to make room for the navigation menu.
+ * Minimum and maximum widths are set to keep the layout flexible.
+ */
+.maincontent {
+    margin: 0 0 0 55px;
+    min-width: 900px;
+    max-width: 1020px;
+    min-height: 730px;
+}
+/* Styles for links in the maincontent div. */
+.maincontent a {
+    font-weight: bold;
+    text-decoration: none;
+    padding: 2px 4px;
+}
+/*
+#maincontent a:link, #maincontent a:visited {
+    color: #00425E;
+    border-bottom: #00425E dashed 1px;
+}
+
+#maincontent a:hover, #maincontent a:active {
+    color: #fff;
+    background-color: #00425E;
+    border-bottom: none;
+}*/
+/* The caption on the front page is bold and centered. */
+p#caption {
+    margin: 0;
+    padding: 3px 10px;
+    font-weight: bold;
+    text-align: center;
+}
+/* The footer needs to appear below anything that is floated, so clear:
+both is added to the rule. */
+
+.footer {
+    /*clear: both;*/
+    background-color: #fbfbfb;
+    border-top: 1px solid #036;
+    padding: 0 0 0 15px;
+    margin: 5px;
+}
+.footer p {
+    margin-bottom: 0px;
+    padding: 5px;
+    font-size: 110%;
+    color: #036;
+    margin-bottom: 0px;
+    font-weight:bold;
+}
+/* Styles for the contact form. */
+form {
+    margin: 0 0 0 20px;
+}
+form h2 {
+    color: #036;
+    font-size: 80%;
+    font-weight: bold;
+    margin: 0 0 5px 10px;
+}
+form p {
+    margin: 0 0 5px 0;
+}
+.formbox {
+    width: 250px;
+}
+fieldset {
+    border: none;
+}
+/* Setting display to block forces the label for each form element
+ * onto a line of its own.
+ */
+label {
+    font-weight: bold;
+    color: #036;
+    display: block;
+}
+/* This needs to be overridden for the subscribe and interests labels,
+ * so display is reset to inline.
+ */
+#subscribe label, #interests label {
+    display: inline;
+    padding: 0 20px 0 3px;
+}
+#interests div {
+    float: left;
+}
+/* The warning class makes the error messages on the
+ * feedback form bold and red.
+ */
+.warning {
+    font-weight: bold;
+    color: #f00;
+}
